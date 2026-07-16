@@ -1,0 +1,472 @@
+/* Global */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button{
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+
+/* Navbar */
+
+.navbar{
+    background:#000;
+    color:#fff;
+
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.navbar img{
+    height:45px;
+}
+
+.menu,
+.search{
+    font-size:20px;
+    cursor:pointer;
+}
+
+.nav-expand{
+    position:absolute;
+
+    left:50%;
+    bottom:18px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:60px;
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.nav-expand a{
+    color:white;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:14px;
+}
+
+.navbar:hover{
+    height:150px;
+}
+
+.navbar:hover .nav-expand{
+    opacity:1;
+}
+
+
+/* Hero Section */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:90vh;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    color:white;
+}
+
+.hero-content h1{
+    font-size:60px;
+    width:650px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.hero-content button{
+    padding:15px 35px;
+    border:none;
+    border-radius:35px;
+    background:white;
+    font-size:16px;
+}
+
+.hero-content button:hover{
+    background:#00ADEF;
+    color:white;
+}
+
+
+/* Cars Section */
+
+.cars-container{
+    display:flex;
+    flex-direction:column;
+    gap:70px;
+    padding:100px 5%;
+}
+
+.cars{
+    width:70%;
+    max-width:600px;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow: 0 0 50px rgb(92, 255, 86);
+
+    transition:.4s;
+}
+
+.cars:nth-child(even){
+    margin-left:auto;
+}
+
+.cars:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 18px 35px rgba(0,0,0,.50),
+    0 28px 55px rgba(0,0,0,.50);
+}
+
+.cars h2{
+    background:white;
+    padding:18px;
+    font-size:26px;
+}
+
+.cars img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.cars:hover img{
+    transform:scale(1.05);
+}
+
+
+/* Overlay */
+
+.overlay{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.cars:hover .overlay{
+    opacity:1;
+}
+
+.overlay div{
+    width:80%;
+
+    display:flex;
+    justify-content:space-between;
+
+    margin:12px 0;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid rgba(255,255,255,.5);
+}
+
+.overlay span{
+    font-size:18px;
+}
+
+.overlay span:first-child{
+    font-weight:bold;
+}
+
+.overlay button{
+    margin-top:25px;
+
+    padding:12px 28px;
+
+    border:none;
+    border-radius:30px;
+
+    background:white;
+
+    font-size:15px;
+    font-weight:bold;
+}
+
+.overlay button:hover{
+    background:#00ADEF;
+    color:white;
+}
+
+/* Feature Section */
+
+.feature{
+    background:#000;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:60px;
+
+    padding:80px 5%;
+}
+
+.feature-text{
+    flex:1;
+}
+
+.feature-text span{
+    color:#bfbfbf;
+    font-size:18px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.feature-text h2{
+    font-size:52px;
+    margin:20px 0;
+    line-height:1.2;
+}
+
+.feature-text p{
+    font-size:20px;
+    color:#d8d8d8;
+    line-height:1.7;
+    margin-bottom:30px;
+    max-width:500px;
+}
+
+.feature-text button{
+    padding:14px 35px;
+    border:none;
+    border-radius:35px;
+    background:white;
+    font-size:16px;
+}
+
+.feature-text button:hover{
+    background:#00ADEF;
+    color:white;
+}
+
+.feature-video{
+    flex:1;
+}
+
+.feature-video video{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow: 0 0 60px aqua;
+}
+
+
+/* Follow Section */
+
+.follow{
+    padding:90px 5%;
+    text-align:center;
+}
+
+.follow h2{
+    font-size:48px;
+    font-weight:400;
+    margin-bottom:50px;
+}
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:70px;
+}
+
+.social-icons i{
+    font-size:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.social-icons i:hover{
+    color:#00ADEF;
+    transform:scale(1.2);
+}
+
+
+/* Footer */
+
+.footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:70px 5%;
+}
+
+.footer h1{
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+    margin-bottom:40px;
+}
+
+.footer-links a{
+    color:#d8d8d8;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#00ADEF;
+}
+
+.footer p{
+    color:#999;
+    font-size:15px;
+}
+
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero-content h1{
+    width:100%;
+    font-size:46px;
+}
+
+.feature{
+    flex-direction:column;
+}
+
+.feature-text{
+    text-align:center;
+}
+
+.feature-text p{
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.feature-video{
+    width:100%;
+}
+
+}
+
+
+@media(max-width:480px){
+
+.menu,
+.search{
+    font-size:16px;
+}
+
+.navbar img{
+    height:35px;
+}
+
+.hero{
+    height:60vh;
+}
+
+.hero-content h1{
+    font-size:28px;
+}
+
+.hero-content button{
+    padding:12px 25px;
+}
+
+.feature-text h2{
+    font-size:28px;
+}
+
+.follow h2{
+    font-size:28px;
+}
+
+.social-icons{
+    gap:25px;
+}
+
+.social-icons i{
+    font-size:26px;
+}
+
+}
